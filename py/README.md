@@ -1,4 +1,4 @@
-# Virtual Enviroment Setup \& Installating Dependencies
+# Virtual Enviroment Setup \& Installing Dependencies
 
 ## Prerequisites
 |Packages  |Version|
