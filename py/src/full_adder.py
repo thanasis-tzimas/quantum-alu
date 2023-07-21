@@ -10,4 +10,4 @@ circuit.cx(1, 2)
 # Optional operation
 circuit.cx(0, 1)
 
-print(circuit.draw('text'))
+circuit.draw(output="mpl", filename="diagrams/full_adder.png")

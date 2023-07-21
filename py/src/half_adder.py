@@ -14,4 +14,4 @@ circuit.cx(0, 1)
 circuit.cx(0, 1)
 
 # Draw the circuit
-print(circuit.draw("text"))
+circuit.draw(output="mpl", filename="diagrams/half-adder.png")
