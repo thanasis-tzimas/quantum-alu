@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "quantum-alu"
+version = "0.1.0"
+description = ""
+authors = ["thanasis-tzimas <thanasistzimas00@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "quantum_alu"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+qiskit = "^0.43.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
