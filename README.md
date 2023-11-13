@@ -11,3 +11,10 @@ python3 -m venv .venv
 python3 -m pip install -r requirements.txt
 ```
 - The project's is implemented using Jupyter Notebooks for Visual Studio Code. You can download the extension, for free, from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter). You can, however, use Jupyter Lab to work but it's recommended to use VSCode (and all its derivatives).
+
+## LaTeX dependencies
+To display in LaTeX the circuit diagrams, you may need to install LaTeX for your system.
+On Debian-based distributions, download using APT:
+```
+sudo apt install texlive texlive-latex-base texlive-latex-extra texlive-latex-recommended
+```
