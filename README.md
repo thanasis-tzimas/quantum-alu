@@ -14,7 +14,11 @@ python3 -m pip install -r requirements.txt
 
 ## LaTeX dependencies
 To display in LaTeX the circuit diagrams, you may need to install LaTeX for your system.
-On Debian-based distributions, download using APT:
+On Debian-based distributions, download using `apt`:
 ```
 sudo apt install texlive texlive-latex-base texlive-latex-extra texlive-latex-recommended
+```
+On Arch-based Linux distributions, download using `pacman`:
+```
+sudo pacman -S texlive
 ```
