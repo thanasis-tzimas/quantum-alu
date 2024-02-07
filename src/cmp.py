@@ -21,8 +21,8 @@ qc.x(b)
 
 qc.barrier(a, b, eq, gt, lt)
 qc.measure(eq, cr[0])
-qc.measure(gt, cr[1])
-qc.measure(lt, cr[2])
+qc.measure(lt, cr[1])
+qc.measure(gt, cr[2])
 
 qc.draw(output='mpl', style='iqp',
         filename='cmp.pdf')
