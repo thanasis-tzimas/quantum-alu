@@ -9,7 +9,7 @@ qc = QuantumCircuit(a, b, carry, cr)
 qc.ccx(a, b, carry)
 qc.cx(a, b)
 
-qc.barrier(a, b, carry)
+qc.barrier(b, carry)
 qc.measure(carry, cr[0])
 qc.measure(b, cr[1])
 
