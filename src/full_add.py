@@ -2,20 +2,21 @@ from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit
 
 a = QuantumRegister(1, 'a')
 b = QuantumRegister(1, 'b')
-carry = QuantumRegister(1, 'carry')
-anc = QuantumRegister(1, 'ancilla')
-cr = ClassicalRegister(2, 'c')
-qc = QuantumCircuit(a, b, carry, anc)
+carry_in = QuantumRegister(1, 'carry_in')
+carry_out = QuantumRegister(1, 'carry_out')
+cr = ClassicalRegister(3, 'c')
+qc = QuantumCircuit(a, b, carry_in, carry_out, cr)
 
-qc.ccx(a, b, carry)
+qc.ccx(a, b, carry_in)
 qc.cx(a, b)
-qc.ccx(b, carry, anc)
-qc.cx(b, carry)
+qc.ccx(b, carry_in, carry_out)
+qc.cx(b, carry_in)
 qc.cx(a, b)
 
-qc.barrier(a, b, carry)
-qc.measure(carry, cr[0])
-qc.measure(b, cr[1])
+qc.barrier(b, carry_in, carry_out)
+qc.measure(carry_out, cr[0])
+qc.measure(carry_in, cr[1])
+qc.measure(b, cr[2])
 
 qc.draw(output='mpl', style='iqp',
         filename='full_add.pdf')
