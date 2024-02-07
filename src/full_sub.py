@@ -15,7 +15,6 @@ qc.ccx(b, carry, anc)
 qc.cx(b, carry)
 qc.cx(a, b)
 
-# TODO: put a barrier and measure
 qc.barrier(b, carry)
 qc.measure(carry, cr[0])
 qc.measure(b, cr[1])
