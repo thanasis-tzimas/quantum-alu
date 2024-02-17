@@ -1,6 +1,8 @@
 from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit
+from qiskit.circuit.library import MCMT
+from qiskit.circuit.library.standard_gates import CXGate
 
-digits: int = 8
+digits: int = 4
 p = QuantumRegister(digits, 'p')
 q = QuantumRegister(digits, 'q')
 eq = QuantumRegister(1, 'p=q')
@@ -11,7 +13,7 @@ for i in range(digits):
     qc.cx(p[i], q[i])
     qc.x(q[i])
 
-qc.cx(q, eq)
+qc.append(MCMT(CXGate(), 1, 1), [q, eq])
 qc.barrier(eq)
 qc.measure(eq, cr)
 
