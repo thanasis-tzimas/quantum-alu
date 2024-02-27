@@ -1,3 +1,5 @@
+ipykernel
+jupyterlab
 qiskit
 qiskit-aer
 qiskit[visualization]
